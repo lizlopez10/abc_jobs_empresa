@@ -23,7 +23,7 @@ spec:
     matchLabels:
       app: empresa
 
-  # En esta sección definimos el contenido del pod y declaramos los contenedores
+  # En esta sección definimos el contenido del pod y declaramos los  contenedores
   template:
     metadata:
       labels:
