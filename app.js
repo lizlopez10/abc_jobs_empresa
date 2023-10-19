@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var metadataRouter = require('./routes/metadata');
+var registroRouter = require('./routes/registro');
 var healthcheckRouter = require('./routes/healthcheck');
 
 var app = express();
@@ -19,8 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/metadata', metadataRouter);
-// app.use('/evaluacion/pregunta', preguntasRouter);
+app.use('/empresa', registroRouter);
 app.use('/empresa/healthcheck', healthcheckRouter);
 
 
